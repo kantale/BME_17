@@ -2,7 +2,8 @@
 This page contains notes. exercises, project descriptions and other material relevant to the [Biomedical Engineering MSc](https://www.bme-crete.edu.gr/en/home) program that is held in coordination with [University of Crete](https://en.uoc.gr/), [Technical University of Crete](https://www.tuc.gr/index.php) and the [Foundation for Research and Technology-Hellas](https://www.forth.gr/)
 
 ### Lectures
-1. Python basics [html](notes/python_basics.html), [markdown](notes/python_basics.md), [ipynb](notes/python_basics.ipynb), [pdf](notes/python_basics.pdf)
+1. Python basics . [html](notes/python_basics.html), [markdown](notes/python_basics.md), [ipynb](notes/python_basics.ipynb), [pdf](notes/python_basics.pdf)
+2. Variables . [html](notes/python_vars_if_functions.html), [markdown](notes/python_vars_if_functions.md), [ipynb](notes/python_vars_if_functions.ipynb), [pdf](notes/python_vars_if_functions.pdf)
 
 ### Programming with python additional material
 * Official Documentation / General links

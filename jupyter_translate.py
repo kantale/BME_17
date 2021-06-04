@@ -21,6 +21,7 @@ translate_client = translate.Client()
 python jupyter_translate.py gr en /Users/admin/biol-494/notes/python_basics.ipynb notes/python_basics.ipynb
 python jupyter_translate.py gr en /Users/admin/biol-494/notes/python_vars_if_functions.ipynb notes/python_vars_if_functions.ipynb
 python jupyter_translate.py gr en /Users/admin/biol-494/notes/python_lists.ipynb  notes/python_lists.ipynb
+python jupyter_translate.py gr en /Users/admin/biol-494/notes/python_list_comprehensions.ipynb notes/python_list_comprehensions.ipynb
 '''
 
 args = sys.argv

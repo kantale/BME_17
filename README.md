@@ -4,6 +4,7 @@ This page contains notes. exercises, project descriptions and other material rel
 ### Lectures
 1. Python basics . [html](notes/python_basics.html), [markdown](notes/python_basics.md), [ipynb](notes/python_basics.ipynb), [pdf](notes/python_basics.pdf)
 2. Variables, functions and the if syntax . [html](notes/python_vars_if_functions.html), [markdown](notes/python_vars_if_functions.md), [ipynb](notes/python_vars_if_functions.ipynb), [pdf](notes/python_vars_if_functions.pdf)
+3. Lists [html](notes/python_lists.html), [markdown](notes/python_lists.md), [ipynb](notes/python_lists.ipynb), [pdf](notes/python_lists.pdf).
 
 ### Programming with python additional material
 * Official Documentation / General links

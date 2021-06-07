@@ -6,6 +6,7 @@ This page contains notes. exercises, project descriptions and other material rel
 2. Variables, functions and the if syntax . [html](notes/python_vars_if_functions.html), [markdown](notes/python_vars_if_functions.md), [ipynb](notes/python_vars_if_functions.ipynb), [pdf](notes/python_vars_if_functions.pdf)
 3. Lists [html](notes/python_lists.html), [markdown](notes/python_lists.md), [ipynb](notes/python_lists.ipynb), [pdf](notes/python_lists.pdf).
 4. List comprehension . [html](notes/python_list_comprehensions.html), [markdown](notes/python_list_comprehensions.md), [ipynb](notes/python_list_comprehensions.ipynb), [pdf](notes/python_list_comprehensions.pdf).
+5. While, dictionary, tuples. sets . [html](notes/python_while_dictionary_tuples_sets.html), [markdown](notes/python_while_dictionary_tuples_sets.md), [ipynb](notes/python_while_dictionary_tuples_sets.ipynb), [pdf](notes/python_while_dictionary_tuples_sets.pdf). 
 
 ### Programming with python additional material
 * Official Documentation / General links

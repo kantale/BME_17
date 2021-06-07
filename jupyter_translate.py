@@ -22,6 +22,7 @@ python jupyter_translate.py gr en /Users/admin/biol-494/notes/python_basics.ipyn
 python jupyter_translate.py gr en /Users/admin/biol-494/notes/python_vars_if_functions.ipynb notes/python_vars_if_functions.ipynb
 python jupyter_translate.py gr en /Users/admin/biol-494/notes/python_lists.ipynb  notes/python_lists.ipynb
 python jupyter_translate.py gr en /Users/admin/biol-494/notes/python_list_comprehensions.ipynb notes/python_list_comprehensions.ipynb
+python jupyter_translate.py gr en /Users/admin/biol-494/notes/python_while_dictionary_tuples_sets.ipynb notes/python_while_dictionary_tuples_sets.ipynb
 '''
 
 args = sys.argv

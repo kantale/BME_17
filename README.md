@@ -12,8 +12,8 @@ This page contains notes. exercises, project descriptions and other material rel
 ### Exercises 
 [In this repository there is a file containing 25 exercises](exercises.md). These exercises are covering easy to medium common programming tasks. The deadline for delivering your solutions is *TBA*. 
 
-#### How to hand over solutions. 
-To hand over solutions send an email to [kantale@ics.forth.gr](mailto:kantale@ics.forth.gr). On the subject or on the beginning of your email you will have to mention your name. On the mail you can copy-paste the solutions. On the top of each solution there should exist a python comment in the following format: 
+#### How to hand over solutions
+To hand over solutions send an email to [kantale@ics.forth.gr](mailto:kantale@ics.forth.gr). On the subject or on the beginning of your email you will have to mention your name. On the mail you will have to copy-paste the solutions one after the other. On the top of each solution there should exist a python comment in the following format: 
 
 ```python
 # exercise <NUMBER>

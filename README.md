@@ -9,6 +9,58 @@ This page contains notes. exercises, project descriptions and other material rel
 5. While, dictionary, tuples, sets . [html](notes/python_while_dictionary_tuples_sets.html), [markdown](notes/python_while_dictionary_tuples_sets.md), [ipynb](notes/python_while_dictionary_tuples_sets.ipynb), [pdf](notes/python_while_dictionary_tuples_sets.pdf). 
 6. Files, lambda, string formatting, ternary operator, is operator, variable scoping . [html](notes/python_files_tern_lambda_sf_is.html), [markdown](notes/python_files_tern_lambda_sf_is.md), [ipynb](notes/python_files_tern_lambda_sf_is.ipynb), [pdf](notes/python_files_tern_lambda_sf_is.pdf). 
 
+### Exercises 
+[In this repository there is a file containing 25 exercises](exercises.md). These exercises are covering easy to medium common programming tasks. The deadline for delivering your solutions is *TBA*. 
+
+#### How to hand over solutions. 
+To hand over solutions send an email to [kantale@ics.forth.gr](mailto:kantale@ics.forth.gr). On the subject or on the beginning of your email you will have to mention your name. On the mail you can copy-paste the solutions. On the top of each solution there should exist a python comment in the following format: 
+
+```python
+# exercise <NUMBER>
+```
+
+For example. Suppose that the exercise is:
+
+> Exercise: 11
+>
+> Write a function that will take as arguments two numbers. The function should return the sum of these two numbers. 
+>
+
+The part of your email that will contain the solution to this exercise should be:
+
+```python
+
+# exercise 11
+def f(a,b):
+    return a+b
+```
+
+Although this is the recommended way of handing over exercises other options are:
+* Attachments with .py files. Again on the top of each solution there should be a comment as described before.
+* Attachments with .ipynb files. Do not forget to add the python comment with the number of the exercise as described before. This comment should be in the same cell with the one containing your solution.
+
+To save the exercises in .ipynb or in .py format from jupyter: Go to File --> Download as -> Python (or Notebook). Then you can send me as an attachment the downloaded file:
+
+![img](https://i.imgur.com/jm2tmHm.png) 
+
+**ATTENTION The following formats are not accepted:**
+* pdf, Microsoft Word doc, Open Office, Libre Office, files 
+* Compressed files 
+* Screenshots 
+
+#### How are the exercises graded?
+Every exercise is graded from 0 to 10. All exercises have the same weight. The logic of grading is the following:
+* Grade 0. No solution was handed over.
+* Grade 1. Wrong results. Some basic structure of the solutions has been drafted.
+* Grade 2. Wrong results. A very small part of the solution has been implemented.
+* Grade 3. Wrong results. A significant part of the solution has been implemented. 
+* Grade 4. Wrong results. The complete structure has been implemented but is contains important logic errors.
+* Grade 5. Wrong results. The complete structure has been implemented but it contains less important logic errors.
+* Grade 6. Wrong results. The complete structure has been implemented but is contains minor logic errors.
+* Grade 7. Correct results, but not for all possible scenarios / inputs
+* Grade 8. Correct results, with wrong logic! (this happens many times..)
+* Grade 9. Correct results, with correct logic, but there is one obvious better / more efficient solution. 
+* Grade 10. Flawless implementation. Bravo!
 
 
 ### Programming with python additional material

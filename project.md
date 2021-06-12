@@ -3,7 +3,7 @@
 Suppose that a town has a population of `P`. 
 Each individual is living in a single house. 
 The town is hit by the new coronavirus pandemic!
-The virus is spread in throughout the people in the town with the following characteristics:
+The virus is spread in the town with the following characteristics:
 
 * Every day `N` random people visit other houses 
 * If the visitors are infected and the hosts are not infected, then the hosts are getting infected with a probability `S`.

@@ -5,13 +5,11 @@ Each individual is living in a single house.
 The town is hit by the new coronavirus pandemic!
 The virus is spread in the town with the following characteristics:
 
-* Every day `N` random people visit other houses 
+* Every day `N` random people visit other houses.
 * If the visitors are infected and the hosts are not infected, then the hosts are getting infected with a probability `S`.
 * If the visitors are not infected and the hosts are infected, then the visitors are getting infected with the same probability `S`.
 * If an individual gets infected in day `D`, then he/she is able to transmit the virus from days: `D+D1` to `D+D2`. After day `D+D2` he/she cannot infect or get infected (he/she is immune). 
 * We suppose that at day 1, `I` people have just got infected. 
-
-
 
 In this project you will have to create a program in python that will answer the following basic question:
 
@@ -19,8 +17,11 @@ In this project you will have to create a program in python that will answer the
 
 Let `M` be this value. 
 
-We suppose that the pandemic ends when no one is infectious any more. 
+You will also have to answer to following question:
 
+> What is maximum number of `N` (people that break the lock down measures!) that can be if we don't want `M` to go over a given value?
+ 
+We suppose that the pandemic ends when no one is infectious any more. 
 For example suppose that the number of infectious people for each day is (random numbers):
 
 ```text

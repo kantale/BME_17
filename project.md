@@ -86,7 +86,7 @@ python program.py --P 100000 --compute_cheaters 1500
 # with the default values of the rest parameters, except of P which is 100.000
 ```
 
-Overall these tasks can help up understand how the various parameters of the spreading pattern of the virus affect the pressure in a healthcare system.
+Overall these tasks can help us understand how the various parameters of the spreading pattern of the virus affect the pressure in a healthcare system.
 
 
 **Implementation Note 1**. Your program should perform a *simulation* of the pandemic. Namely, it should create initially `P` inhabitants and randomly infect `I` of them. After that it should go through an iteration over all days until the pandemic is over. Every iteration (or else, every day), random `N` people go to visit other people. So in your program, for each day, you should update the status of every inhabitant if needed (i.e from `healthy` to `infected`, or from `infected` to `immune`) and calculate the total number of infected.

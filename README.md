@@ -62,6 +62,20 @@ Every exercise is graded from 0 to 10. All exercises have the same weight. The l
 * Grade 9. Correct results, with correct logic, but there is one obvious better / more efficient solution. 
 * Grade 10. Flawless implementation. Bravo!
 
+### Project 
+[The project is described in here](project.md).
+
+You should deliver an implementation of the project by *TBA* 
+
+In your email you should include:
+* Your code which it should be one or more python (.py) files. 
+* A report that should include:
+   * A description of how to run the program.
+   * A description of the general structure of the code 
+   * A discussion that should include: 
+      * How is the pressure to local healthcare systems (parameter `M`) is affected according to the rest of the parameters? 
+      * Add 4-5 examples of plots demonstrating your findings 
+   * A section that should include your opinion regarding the project. Did it help you understand some concepts in programming? What is the most difficult part? Do you have any suggestions for improvement?. This last section is not going to be graded.. it is a chance to get some feedback regarding the project itself.
 
 ### Programming with python additional material
 * Official Documentation / General links

@@ -63,7 +63,7 @@ Every exercise is graded from 0 to 10. All exercises have the same weight. The l
 * Grade 10. Flawless implementation. Bravo!
 
 ### Project 
-[The project is described in here](project.md).
+[The project is described here](project.md).
 
 You should deliver an implementation of the project by *TBA* 
 

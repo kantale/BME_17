@@ -8,6 +8,7 @@ This page contains notes. exercises, project descriptions and other material rel
 4. List comprehension . [html](notes/python_list_comprehensions.html), [markdown](notes/python_list_comprehensions.md), [ipynb](notes/python_list_comprehensions.ipynb), [pdf](notes/python_list_comprehensions.pdf).
 5. While, dictionary, tuples, sets . [html](notes/python_while_dictionary_tuples_sets.html), [markdown](notes/python_while_dictionary_tuples_sets.md), [ipynb](notes/python_while_dictionary_tuples_sets.ipynb), [pdf](notes/python_while_dictionary_tuples_sets.pdf). 
 6. Files, lambda, string formatting, ternary operator, is operator, variable scoping . [html](notes/python_files_tern_lambda_sf_is.html), [markdown](notes/python_files_tern_lambda_sf_is.md), [ipynb](notes/python_files_tern_lambda_sf_is.ipynb), [pdf](notes/python_files_tern_lambda_sf_is.pdf). 
+7. Generators, Exceptions, Collections . [html](notes/python_gen_imp_cons_exc.html), [markdown](notes/python_gen_imp_cons_exc.md), [ipynb](notes/python_gen_imp_cons_exc.ipynb), [pdf](notes/python_gen_imp_cons_exc.pdf).  
 
 ### Exercises 
 [In this repository there is a file containing 25 exercises](exercises.md). These exercises are covering easy to medium common programming tasks. The deadline for delivering your solutions is *TBA*. 

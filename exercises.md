@@ -7,6 +7,7 @@
    2. Add a `return` statement, except if the description says `this function does not return anything` (or something similar). If the description says `your function should return ....` and your function does not return anything, then the exercise will take half points (5/10). 
    3. Take special attention on the type of the variable that you have to return. If the description says "the function will return an integer", then you have to return an integer. If your function returns a type that is different from the one requested, the exercise will take half points (5/10).
 * You don't have to check the type of the arguments from inside your functions. 
+* If a description mentions that a function should return `True`/`False`. That means that the function should return a boolean value NOT a string value. For example `return "True"` is wrong! the correct is `return True`.
 * **NEVER USE python's [input](https://docs.python.org/3/library/functions.html#input) function** (Saying it once is not enough)
 
 ## Basics arithmetics
@@ -26,7 +27,7 @@ f(135) # Returns False
 f(245) # Returns True 
 ```
 ### 3
-Create a function that takes as argument two numbers. The function will return the [harmonic mean](https://en.wikipedia.org/wiki/Harmonic_mean) of these numbers. 
+Create a function that takes as argument two numbers. The function will return a float number which is [harmonic mean](https://en.wikipedia.org/wiki/Harmonic_mean) of these numbers. 
 
 
 ## Basics strings
@@ -87,7 +88,7 @@ As you can see this string contains information regarding a list of mutations.
 * The fifth column contains the altenative nucleotide (can be either `A`,`C`,`G`,`T`)
 * The sixth column contains a quality score. It is a decimal number
 
-Write a function that takes as argument a string similar to `a`. The function will return a dictionary where the key is the position and the value is the quality score. For example it should:
+Write a function that takes as argument a string similar to `a`. The function will return a **dictionary** where the key is the position and the value is the quality score. For example it should:
 
 ```python
 q = f(a)
@@ -145,7 +146,7 @@ As you can see this string contains information regarding a list of mutations.
 * The fifth column contains the altenative nucleotide (can be either `A`,`C`,`G`,`T`)
 * The sixth column contains a quality score. It is a decimal number
 
-Write a function that takes as argument a string similar to `a`. The function will return a dictionary where the key is the position and the value is a dictionary that will have a key 'REF' and a key 'ALT' containing all relevant values. For example it should:
+Write a function that takes as argument a string similar to `a`. The function will return a **dictionary** where the key is the position and the value is a dictionary that will have a key 'REF' and a key 'ALT' containing all relevant values. For example it should:
 
 ```python
 q = f(a)
@@ -174,7 +175,7 @@ def f():
 
 This function creates a list with 10.000 random integers from 100 to 10.000
 
-Create a function that takes as argument a list similar to the one returned by `f`. The function should return the maximum sum of digits for all numbers in the argument.
+Create a function that takes as argument a list similar to the one returned by `f`. The function should return an integer which is the maximum sum of digits for all numbers in the argument. 
 
 ### 9
 
@@ -189,7 +190,7 @@ def f():
 
 This function creates a list with 10.000 random integers from 100 to 10.000
 
-Create a function that takes as argument a list, let `l` similar to the one returned by `f`. The function should return the element in `l` that has the maximum sum of digits.
+Create a function that takes as argument a list, let `l` similar to the one returned by `f`. The function should return an integer which is the element in `l` that has the maximum sum of digits.
 
 ### 10
 Let the following function:
@@ -201,7 +202,7 @@ def f():
     return l
 ```
 This function creates a list with 10.000 random integers from 100 to 10.000. 
-Create a function that takes as argument a list, let `l` similar to the one returned by `f`. The function should return a list containing tuples. Each tuple should contain all possible pairs of number in `l` whose sum is equal to 2021. 
+Create a function that takes as argument a list, let `l` similar to the one returned by `f`. The function should return a **list** containing tuples. Each tuple should contain all possible pairs of number in `l` whose sum is equal to 2021. 
 
 For example a possible return is:
 ```python
@@ -209,19 +210,19 @@ For example a possible return is:
 ```
 
 ### 11
-Create a function that will take as an argument a list containing only strings. The function will return a number: the average length of the strings. For example:
+Create a function that will take as an argument a list containing only strings. The function will return a **float number**: the average length of the strings. For example:
 ```python
 a = ['mitsos', 'anna', 'epameinonas']
 f(a) # Returns 7.0 ((6+4+11)/3)
 ```
 
 ### 12
-Create a function that will take no arguments. The function will return a list with all number that are perfect squared from 100 to 10.000. A number `a` is perfect square if there exist an integer `b` such that b<sup>2</sup>=a. An example of perfect squares are:  100 (=10^2), 144(=12^2), 256(16^2).  
+Create a function that will take no arguments. The function will return a **list** with all number that are perfect squared from 100 to 10.000. A number `a` is perfect square if there exist an integer `b` such that b<sup>2</sup>=a. An example of perfect squares are:  100 (=10^2), 144(=12^2), 256(16^2).  
 
 
 ## Sets
 ### 13
-Create a function that will take as argument 2 strings. The function will returnQ
+Create a function that will take as argument 2 strings. The function will return:
 * `True`: If all letters of the first string exist in the second string.
 * `False`: Otherwise
 

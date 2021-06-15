@@ -1,7 +1,7 @@
 
 ## Some notes 
 * **NEVER USE python's [input](https://docs.python.org/3/library/functions.html#input) function**. You can test your code by simply calling your functions (see later) with some random/testing arguments.
-* As you can see **all** the exercises request to create one (or more) python function(s). That means that ALL your implementation should reside in one (or more) functions. If your implementation is not in a function then it will take half points (5/10)
+* As you can see **all** the exercises request to create one (or more) python function(s). That means that ALL your implementation in a given exercise should reside in one (or more) functions. If your implementation is not in a function then it will take half points (5/10)
 * As you can see on the description of every exercise you will have to write a function. That means that you have to take **special** attention to the following three items:
    1. Implement the exact parameters as the description. If the description mentions `create a function that takes one argument`. That means that you should create a function that takes exactly one argument (not two, not three and not zero).
    2. Add a `return` statement, except if the description says `this function does not return anything` (or something similar). If the description says `your function should return ....` and your function does not return anything, then the exercise will take half points (5/10). 

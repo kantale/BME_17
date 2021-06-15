@@ -18,6 +18,7 @@ translate_client = translate.Client()
 
 
 '''
+export GOOGLE_APPLICATION_CREDENTIALS=/Users/admin/Downloads/polished-talon-315607-8ca156ad51c1.json
 python jupyter_translate.py gr en /Users/admin/biol-494/notes/python_basics.ipynb notes/python_basics.ipynb
 python jupyter_translate.py gr en /Users/admin/biol-494/notes/python_vars_if_functions.ipynb notes/python_vars_if_functions.ipynb
 python jupyter_translate.py gr en /Users/admin/biol-494/notes/python_lists.ipynb  notes/python_lists.ipynb
@@ -25,6 +26,8 @@ python jupyter_translate.py gr en /Users/admin/biol-494/notes/python_list_compre
 python jupyter_translate.py gr en /Users/admin/biol-494/notes/python_while_dictionary_tuples_sets.ipynb notes/python_while_dictionary_tuples_sets.ipynb
 python jupyter_translate.py gr en /Users/admin/biol-494/notes/python_files_tern_lambda_sf_is.ipynb notes/python_files_tern_lambda_sf_is.ipynb
 python jupyter_translate.py gr en /Users/admin/biol-494/notes/python_gen_imp_cons_exc.ipynb notes/python_gen_imp_cons_exc.ipynb
+python jupyter_translate.py gr en /Users/admin/biol-494/notes/python_ser_iter_re.ipynb notes/python_ser_iter_re.ipynb
+
 
 '''
 

@@ -27,6 +27,7 @@ python jupyter_translate.py gr en /Users/admin/biol-494/notes/python_while_dicti
 python jupyter_translate.py gr en /Users/admin/biol-494/notes/python_files_tern_lambda_sf_is.ipynb notes/python_files_tern_lambda_sf_is.ipynb
 python jupyter_translate.py gr en /Users/admin/biol-494/notes/python_gen_imp_cons_exc.ipynb notes/python_gen_imp_cons_exc.ipynb
 python jupyter_translate.py gr en /Users/admin/biol-494/notes/python_ser_iter_re.ipynb notes/python_ser_iter_re.ipynb
+python jupyter_translate.py gr en /Users/admin/biol-494/notes/python_pandas.ipynb notes/python_pandas.ipynb
 
 
 '''

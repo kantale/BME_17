@@ -10,7 +10,7 @@ This page contains notes. exercises, project descriptions and other material rel
 6. Files, lambda, string formatting, ternary operator, is operator, variable scoping . [html](notes/python_files_tern_lambda_sf_is.html), [markdown](notes/python_files_tern_lambda_sf_is.md), [ipynb](notes/python_files_tern_lambda_sf_is.ipynb), [pdf](notes/python_files_tern_lambda_sf_is.pdf). 
 7. Generators, Exceptions, Collections . [html](notes/python_gen_imp_cons_exc.html), [markdown](notes/python_gen_imp_cons_exc.md), [ipynb](notes/python_gen_imp_cons_exc.ipynb), [pdf](notes/python_gen_imp_cons_exc.pdf).  
 8. Serialization, itertools, Regular expressions . [html](notes/python_ser_iter_re.html), [markdown](notes/python_ser_iter_re.md), [ipynb](notes/python_ser_iter_re.ipynb), [pdf](notes/python_ser_iter_re.pdf).  
-9. Pandas . [html](notes/python_pandas.html), [markdown](notes/python_pandas.md), [ipynb](notes/python_pandas.ipynb), [pdf](notes/python_pandas.pdf).  
+9. Pandas . [html](notes/python_pandas.html), [markdown](notes/python_pandas.zip), [ipynb](notes/python_pandas.ipynb), [pdf](notes/python_pandas.pdf).  
 10. Numpy . [html](notes/python_numpy.html), [markdown](notes/python_numpy.zip), [ipynb](notes/python_numpy.ipynb), [pdf](notes/python_numpy.pdf).  
 
 ### Regarding copying

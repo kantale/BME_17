@@ -28,6 +28,9 @@ python jupyter_translate.py gr en /Users/admin/biol-494/notes/python_files_tern_
 python jupyter_translate.py gr en /Users/admin/biol-494/notes/python_gen_imp_cons_exc.ipynb notes/python_gen_imp_cons_exc.ipynb
 python jupyter_translate.py gr en /Users/admin/biol-494/notes/python_ser_iter_re.ipynb notes/python_ser_iter_re.ipynb
 python jupyter_translate.py gr en /Users/admin/biol-494/notes/python_pandas.ipynb notes/python_pandas.ipynb
+python jupyter_translate.py gr en /Users/admin/biol-494/notes/python_numpy.ipynb notes/python_numpy.ipynb
+python jupyter_translate.py gr en /Users/admin/biol-494/notes/python_matplotlib.ipynb notes/python_matplotlib.ipynb
+python jupyter_translate.py gr en /Users/admin/biol-494/notes/python_classes.ipynb notes/python_classes.ipynb
 
 
 '''

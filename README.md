@@ -12,6 +12,7 @@ This page contains notes. exercises, project descriptions and other material rel
 8. Serialization, itertools, Regular expressions . [html](notes/python_ser_iter_re.html), [markdown](notes/python_ser_iter_re.md), [ipynb](notes/python_ser_iter_re.ipynb), [pdf](notes/python_ser_iter_re.pdf).  
 9. Pandas . [html](notes/python_pandas.html), [markdown](notes/python_pandas.zip), [ipynb](notes/python_pandas.ipynb), [pdf](notes/python_pandas.pdf).  
 10. Numpy . [html](notes/python_numpy.html), [markdown](notes/python_numpy.zip), [ipynb](notes/python_numpy.ipynb), [pdf](notes/python_numpy.pdf).  
+11. Plotting . [html](notes/python_matplotlib.html), [markdown](notes/python_matplotlib.zip), [ipynb](notes/python_matplotlib.ipynb), [pdf](notes/python_matplotlib.pdf).  
 
 ### Regarding copying
 Both the Exercises and the Project of this course are assigned individually. You are allowed to discuss potential problems and solutions with your colleagues (I cannot prevent that), but copying and sharing solutions is strictly prohibited. Keep in mind: the programming code that is written by amateurs (in programming) tends to be highly personal. A code that has been shared is very easily identifiable even if various tricks (i.e. change of variable names) have been used. Incidents of copying will be reported and a grade of zero will be assigned.  

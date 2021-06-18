@@ -13,12 +13,13 @@ This page contains notes. exercises, project descriptions and other material rel
 9. Pandas . [html](notes/python_pandas.html), [markdown](notes/python_pandas.zip), [ipynb](notes/python_pandas.ipynb), [pdf](notes/python_pandas.pdf).  
 10. Numpy . [html](notes/python_numpy.html), [markdown](notes/python_numpy.zip), [ipynb](notes/python_numpy.ipynb), [pdf](notes/python_numpy.pdf).  
 11. Plotting . [html](notes/python_matplotlib.html), [markdown](notes/python_matplotlib.zip), [ipynb](notes/python_matplotlib.ipynb), [pdf](notes/python_matplotlib.pdf).  
+12. Classes . [html](notes/python_classes.html), [markdown](notes/python_classes.md), [ipynb](notes/python_classes.ipynb), [pdf](notes/python_classes.pdf).  
 
 ### Regarding copying
 Both the Exercises and the Project of this course are assigned individually. You are allowed to discuss potential problems and solutions with your colleagues (I cannot prevent that), but copying and sharing solutions is strictly prohibited. Keep in mind: the programming code that is written by amateurs (in programming) tends to be highly personal. A code that has been shared is very easily identifiable even if various tricks (i.e. change of variable names) have been used. Incidents of copying will be reported and a grade of zero will be assigned.  
 
 ### Exercises 
-[In this repository there is a file containing 25 exercises](exercises.md). These exercises are covering easy to medium common programming tasks. The deadline for delivering your solutions is *TBA*. 
+[In this repository there is a file containing 25 exercises](exercises.md). These exercises are covering easy to medium common programming tasks. The deadline for delivering your solutions is *31 July 2021*
 
 #### How to hand over solutions
 To hand over solutions send an email to [kantale@ics.forth.gr](mailto:kantale@ics.forth.gr). On the subject or on the beginning of your email you will have to mention your name. On the mail you will have to copy-paste the solutions one after the other. On the top of each solution there should exist a python comment in the following format: 
@@ -73,17 +74,21 @@ Every exercise is graded from 0 to 10. All exercises have the same weight. The l
 ### Project 
 [The project is described here](project.md).
 
-You should deliver an implementation of the project by *TBA* 
+You should deliver an implementation of the project by *10 August 2021* 
 
 In your email you should include:
 * Your code which it should be one or more python (.py) files. 
-* A report that should include:
+* A report (minimum 500, maximum 3000 words) that should include:
    * A description of how to run the program.
    * A description of the general structure of the code 
    * A discussion that should include: 
-      * How is the pressure to local healthcare systems (parameter `M`) is affected according to the rest of the parameters? 
+      * How is the pressure to local healthcare systems (parameter `M`) affected according to the rest of the parameters? 
       * Add 4-5 examples of plots demonstrating your findings 
    * A section that should include your opinion regarding the project. Did it help you understand some concepts in programming? What is the most difficult part? Do you have any suggestions for improvement?. This last section is not going to be graded.. it is a chance to get some feedback regarding the project itself.
+
+* The project will be graded according to the final:
+   1. **95%:** Ability to run your program with all available parameters and get the expected results.
+   2. **5%:** Technical completeness and quality of your report. Note: The size of the report is not important! A 500 word report that contains concisely what is requested is enough. Seek for quality not quantity!
 
 ### Programming with python additional material
 * Official Documentation / General links

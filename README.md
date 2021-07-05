@@ -116,6 +116,7 @@ In your email you should include:
    * [Python & APIs: A Winning Combo for Reading Public Data](https://realpython.com/python-api/)
    * [Recursion in Python: An Introduction](https://realpython.com/python-recursion/)
 * Challenges: 
+   * https://adventofcode.com/   
    * https://www.hackerrank.com/dashboard
    * https://stepik.org  
    * http://rosalind.info/problems/locations/ 

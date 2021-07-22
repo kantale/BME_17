@@ -209,6 +209,8 @@ For example a possible return is:
 [(1012, 1009), (1672, 349), (818, 1203), (548, 1473), (952, 1069)]
 ```
 
+Note 1: If the pair (a,b) is in the list, you do not have to also include the pair (b,a), but if you do this is not a mistake. 
+
 ### 11
 Create a function that will take as an argument a list containing only strings. The function will return a **float number**: the average length of the strings. For example:
 ```python
@@ -235,7 +237,7 @@ f("mpanana", "pania")  # Return False
 
 ## Files
 ### 14
-The HUGO Gene Nomenclature Committee or else HGNC is a committee which is responsible for maintaining gene names along with informatation regarding their location and function.  
+The HUGO Gene Nomenclature Committee or else HGNC is a committee which is responsible for maintaining gene names along with information regarding their location and function.  
 
 In this site: https://www.genenames.org/download/statistics-and-files/ there is a list with all datasets maintained from HGNC. You can see that these files are available in TSV (Tab Separated Values) and also in JSON. 
 
@@ -246,6 +248,8 @@ In this exercise you will have to download the first file titled "protein-coding
 Create a function named `f_1` that will take as argument a string with the name of the TSV file. The function will return the number of genes that exist in the big arm of chromosome 17 (17q).
 
 Create a function named `f_2` that will take as argument a string with the name of the JSON file. The function will return the number of genes that exist in the big arm of chromosome 17 (17q).
+
+Note 1: In order to check if the gene is in 17q, just check if the field ```location``` contains the string ```17q```.  
 
 ## Regular Expressions 
 ### 15
@@ -320,8 +324,6 @@ Suppose that we have a set of 7 letters arranged on the following "honeycomb":
       Σ
 
 ```
-
-ΠΕΛΟΠΟΝΝΗΣΟΣ
 
 The purpose of this game is to Locate as many as possible words greek that meet the following criteria:
 * The word must be at least four letters long.

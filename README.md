@@ -127,6 +127,7 @@ In your email you should include:
    * [Cheatsheet 2](https://s3.amazonaws.com/dq-blog-files/numpy-cheat-sheet.pdf)
 * Scipy
    * [Paper στο Nature για το scipy](https://www.nature.com/articles/s41592-019-0686-2) published: 3 February 2020
+   * [Working With Linear Systems in Python With scipy.linalg](https://realpython.com/python-scipy-linalg/)
    * [scipy lectures](http://scipy-lectures.org/)
 * Pandas:
    * [Cheatsheet](https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf)

@@ -454,7 +454,7 @@ def load_cities():
   return pd.DataFrame(json.loads(s))
 ```
 
-Create a function that will not take any argument. The function will return the total population of the cities belonging to the region: ```Crete```. 
+Create a function that will not take any argument. The function will return the total population of the cities belonging to the region: ```Crete``` according to the census of 2011. 
 
 
 ### 22

@@ -91,8 +91,16 @@ Overall these tasks can help us understand how the various parameters of the spr
 
 **Implementation Note 1**. Your program should perform a *simulation* of the pandemic. Namely, it should create initially `P` inhabitants and randomly infect `I` of them. After that it should go through an iteration over all days until the pandemic is over. Every iteration (or else, every day), random `N` people go to visit other people. So in your program, for each day, you should update the status of every inhabitant if needed (i.e from `healthy` to `infected`, or from `infected` to `immune`) and calculate the total number of infected people. The maximum number of infected people over all days is the value `M`. 
 
-**Implementation Note 2**. Regarding the "Your program should also accept one of the following parameters: ". This does not mean that you have to choose which one to implement. **You should implement all options**. When I am running your programming I should be able to apply only one of the following parameters `compute_M`, `--plot_population`, `plot_initial`, `plot_cheaters`, `compute_cheaters`, but your program should support them all. 
+**Implementation Note 2**. Regarding the "Your program should also accept one of the following parameters: ". This does not mean that you have to choose which one to implement. **You should implement all options**. When I am running your programming I should be able to apply only one of the following parameters `--compute_M`, `--plot_population`, `--plot_initial`, `--plot_cheaters`, `--compute_cheaters`, and not two or more. For example this should be fine:
 
+```bash
+python program.py --compute_cheaters 1500
+```
+
+This should raise an error:
+```bash
+python program.py --compute_cheaters 1500 --plot_population 10000 20000 11
+```
 
 
 

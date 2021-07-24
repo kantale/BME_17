@@ -364,7 +364,7 @@ def f():
 Write a function that takes one argument, let `l`. This argument is a list like the one returned by function `f`. The function should return 2 values a,b. These values should have the following properties:
 
 1. ```a<b```
-2. the value l[b] - l[a] has the maximum value over all possible values of a and b 
+2. the value `l[b] - l[a]` has the maximum value over all possible values of a and b 
 
 Another way of describing this exercise is: Given a time series that contains the stock price for a continuous period of time what are the two optimal days for buying and selling respectively? (We suppose that you cannot sell before you buy) 
 

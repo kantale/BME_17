@@ -219,7 +219,8 @@ f(a) # Returns 7.0 ((6+4+11)/3)
 ```
 
 ### 12
-Create a function that will take no arguments. The function will return a **list** with all number that are perfect squared from 100 to 10.000. A number `a` is perfect square if there exist an integer `b` such that b<sup>2</sup>=a. An example of perfect squares are:  100 (=10^2), 144(=12^2), 256(16^2).  
+Create a function that will take no arguments. The function will return a **list** with all number that are perfect squares from 100 to 10.000. A number `a` is perfect square if there exist an integer `b` such that b<sup>2</sup>=a. Some examples of perfect squares are: 100 (=10<sup>2</sup>), 121(=11<sup>2</sup>), 144(=12<sup>2</sup>), 225(=15<sup>2</sup>), 256(16<sup>2</sup>).  
+
 
 
 ## Sets
@@ -406,7 +407,7 @@ array([[1, 2, 3, 4],
 ### 20
 
 Create a function that will take no argument. The function should:
-* Create 10.000 random numpy arrays 3X3 with elements 0 or 1 (chosen randomly)
+* Create 10.000 random numpy arrays 3X3 with elements 0 or 1 (chosen randomly) so that that the absolute difference between the number of "1"s and "0"s is always 1. Or else the number of "1"s and "0"s should be either 5 and 4 or 4 and 5 respectively. 
 * For each array it should check if the 1's win or 0's in a [tic-tac-toe](https://en.wikipedia.org/wiki/Tic-tac-toe) game. Some examples are:
 
 1 wins:

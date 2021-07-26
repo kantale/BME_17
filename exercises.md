@@ -279,9 +279,9 @@ HIST1H2AH: histone cluster 1 H2A family member h (6p22.1)
 '''
 ```
 
-Create a function named `f_1` that will take as input a string with the same structure a `genes`. The function will use regular expressions to parse this string and it will return a list with the names of all genes that it contains.
+Create a function named `f_1` that will take as input a string with the same structure as `genes`. The function will use regular expressions to parse this string and it will return a list with the names of all genes that it contains.
 
-Create a function named `f_2` that will take as input a string with the same structure a `genes`. The function will use regular expressions to parse this string and it will return a dictionary. The keys will be the name of the gene and values will be the position of the gene as it is shown in the end of each line. For example it should:
+Create a function named `f_2` that will take as input a string with the same structure as `genes`. The function will use regular expressions to parse this string and it will return a dictionary. The keys will be the name of the gene and values will be the position of the gene as it is shown in the end of each line. For example it should:
 
 ```python
 a = f_2(gene)

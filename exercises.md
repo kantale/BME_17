@@ -307,7 +307,7 @@ def get_greek_words(fn='greek_words.txt'):
     if not r.ok:
         r.raise_for_status()
 
-    with open(fn, 'x') as f:
+    with open(fn, 'x', encoding='utf-8') as f:
         f.write( str(r.content, encoding='utf8') )
 ```
 

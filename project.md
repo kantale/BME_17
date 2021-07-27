@@ -102,5 +102,5 @@ This should raise an error:
 python program.py --compute_cheaters 1500 --plot_population 10000 20000 11
 ```
 
-
+**Implementation Note 3**. Do not use the ```input``` function to read the parameters. Read the lecture notes on [how to read parameters from the command line](notes/python_gen_imp_cons_exc.md) (chapter: Running programs from the command line). 
 

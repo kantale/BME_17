@@ -10,6 +10,37 @@
 * If a description mentions that a function should return `True`/`False`. That means that the function should return a boolean value NOT a string value. For example `return "True"` is wrong! the correct is `return True`.
 * **NEVER USE python's [input](https://docs.python.org/3/library/functions.html#input) function** (Saying it once is not enough)
 
+* For some exercises you might need to have installed some python packages that do not belong to the standard python distribution. Therefore you might see an error looking like this:
+```
+import matplotlib
+ModuleNotFoundError: No module named 'matplotlib'
+```
+Instead of `matplotlib` you might see another python library
+
+In that case you should install the library with one of the following methods:
+* From the command prompt type:
+```
+pip install <name_of_library>
+```
+For example:
+```
+pip install matplotlib
+```
+
+
+* From jupyter type the following in a cell and then execute this shell:
+```
+!pip install <name_of_library>
+```
+For example:
+```
+!pip install matplotlib
+```
+
+
+
+
+
 ## Basics arithmetics
 ### 1 
 Create a function that takes as argument an integer value. The function should return:

@@ -55,8 +55,8 @@ In this project you will have to create a program in python that will take the f
 * I : Number of initial positive cases. If not given then assume I=100
 * N : Number of "cheaters" or else people that ignore lockdown measures and visit other houses. If not given then the program should terminate with an error message, except if the options `--plot_cheaters`  or `--compute_cheaters` have been given (see below). 
 * S : Transmission probability. A number between 0 and 1. This is the probability that the virus is spread when an infected person gets in contact with an infected and non immunized person. Of not set then assume P=1 
-* D1 : Days after on which an infected person becomes infectious 
-* D2 : Days after on which an infected person stops being infectious
+* D1 : Days after on which an infected person becomes infectious. If not set then assume D1=3.
+* D2 : Days after on which an infected person stops being infectious. If not set then assume D2=10.
 
 Your program should also accept one of the following parameters: 
 

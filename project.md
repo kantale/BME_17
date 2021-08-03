@@ -104,3 +104,9 @@ python program.py --compute_cheaters 1500 --plot_population 10000 20000 11
 
 **Implementation Note 3**. Do not use the ```input``` function to read the parameters. Read the lecture notes on [how to read parameters from the command line](notes/python_gen_imp_cons_exc.md) (chapter: Running programs from the command line). 
 
+**Implementation Note 4**. For simplicity consider that a cheater can visit a single host at a single day. A hosy can receive at most one cheater as visitor at a single day. 
+
+
+
+
+

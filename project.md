@@ -106,7 +106,7 @@ python program.py --compute_cheaters 1500 --plot_population 10000 20000 11
 
 **Implementation Note 4**. For simplicity consider that a cheater can visit a single host at a single day. A hosy can receive at most one cheater as a visitor on a single day. 
 
-
+**Implementation Note 5**. Very informative tutorial and guide on using argparse to parse command line arguments: https://realpython.com/command-line-interfaces-python-argparse/
 
 
 

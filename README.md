@@ -19,7 +19,7 @@ This page contains notes. exercises, project descriptions and other material rel
 Both the Exercises and the Project of this course are assigned individually. You are allowed to discuss potential problems and solutions with your colleagues (I cannot prevent that), but copying and sharing solutions is strictly prohibited. Keep in mind: the programming code that is written by amateurs (in programming) tends to be highly personal. A code that has been shared is very easily identifiable even if various tricks (i.e. change of variable names) have been used. Incidents of copying will be reported and a grade of zero will be assigned.  
 
 ### Exercises 
-[In this repository there is a file containing 25 exercises](exercises.md). These exercises are covering easy to medium common programming tasks. The deadline for delivering your solutions is *31 July 2021*
+[In this repository there is a file containing 25 exercises](exercises.md). These exercises are covering easy to medium common programming tasks. The deadline for delivering your solutions is ~31 July 2021~ *10 August 2021*
 
 #### How to hand over solutions
 To hand over solutions send an email to [kantale@ics.forth.gr](mailto:kantale@ics.forth.gr). On the subject or on the beginning of your email you will have to mention your name. On the mail you will have to copy-paste the solutions one after the other. On the top of each solution there should exist a python comment in the following format: 
@@ -74,7 +74,7 @@ Every exercise is graded from 0 to 10. All exercises have the same weight. The l
 ### Project 
 [The project is described here](project.md).
 
-You should deliver an implementation of the project by *10 August 2021* 
+You should deliver an implementation of the project by ~10 August 2021~ *20 August 2021*.
 
 In your email you should include:
 * Your code which it should be one or more python (.py) files. 

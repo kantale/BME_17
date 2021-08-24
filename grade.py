@@ -137,7 +137,8 @@ class Grades:
         'Askhh', 'Askshsh', '΄΄Ασκηση', '΄΄Άσκηση', 'Άskisi', 'Αskisi',
         '.+skisi',
 
-        'Exercise', 'exercise', 'ex', 'exercise.', 'Ex.'
+        'Exercise', 'exercise', 'ex', 'exercise.', 'Ex.', 
+        'excercise', 'exercice',
     ]
 
     ex_regexp = re.compile(r'^\s*#+\s*({})\s*_*(?P<ask>\d+)'.format('|'.join(declarations)))
@@ -203,6 +204,7 @@ AM: {AM}
             send_to_me=False,
             random_list=None,
             optional=None,
+            show_answer_when_already_graded=False,
         ):
         self.dir = directory
         self.solutions_dir = solutions_dir
@@ -214,6 +216,7 @@ AM: {AM}
         self.all_anonymous_grades = [] # For plotting and statistics
         self.random_list = random_list
         self.optional = set(optional) if optional else set()
+        self.show_answer_when_already_graded = show_answer_when_already_graded
 
         print (f'EXERCICE  DIR: {self.dir}')
         print (f'SOLUTIONS DIR: {self.solutions_dir}')
@@ -293,6 +296,10 @@ AM: {AM}
 
             if os.path.exists(filename):
                 print ('   Already graded..')
+                if self.show_answer_when_already_graded:
+                    print ('==ANSWER==')
+                    print (answer)
+                    print ('==========')
                 continue
 
             print (answer)
@@ -950,7 +957,7 @@ AM: {AM}
 
 if __name__ == '__main__':
     '''
-    python grade.py --dir /Users/admin/BME_17/exercises1 --sol /Users/admin/BME_17/solutions1 --action grade --start 1 --end 25 
+    python grade.py --dir /Users/admin/BME_17/exercises1 --sol /Users/admin/BME_17/solutions1 --action grade --start 1 --end 25 --show_answer_when_already_graded 
 
 
     ====================
@@ -1036,6 +1043,7 @@ if __name__ == '__main__':
     parser.add_argument("--action", help="What to do: grade")
     parser.add_argument("--actually_send_mail", action="store_true")
     parser.add_argument("--send_to_me", action="store_true")
+    parser.add_argument("--show_answer_when_already_graded", action="store_true")
     parser.add_argument("--start", type=int, help="Start from")
     parser.add_argument("--end", type=int, help="Start end")
     parser.add_argument("--random_list", type=int, help='Number of random exercises')
@@ -1060,5 +1068,6 @@ if __name__ == '__main__':
             end = args.end,
             random_list = args.random_list,
             optional = args.optional,
+            show_answer_when_already_graded = args.show_answer_when_already_graded,
         )
     

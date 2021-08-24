@@ -123,6 +123,7 @@ In your email you should include:
    * https://www.hackerrank.com/dashboard
    * https://stepik.org  
    * http://rosalind.info/problems/locations/ 
+   * https://projecteuler.net/ 
 * NumPy
    * [NumPy Tutorial](https://realpython.com/numpy-tutorial/)
    * [NumPy: the absolute basics for beginners](https://numpy.org/devdocs/user/absolute_beginners.html)

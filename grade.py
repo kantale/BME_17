@@ -21,6 +21,7 @@ from collections import defaultdict
 from os.path import expanduser
 
 from get_ask import get_ask
+from params import Params
 
 class Utils:
     '''
@@ -145,55 +146,6 @@ class Grades:
 
     SOLUTIONS_FILENAME_PATTERN = 'AM_{id_}_ASK_{ASK}'
 
-    GREETING_1 = '''
-Γεια σας,
-
-Παρακάτω ακολουθεί η βαθμολογία σας στις ασκήσεις {START}-{END} στο μάθημα:'''
-
-    GREETING_2 = '''
-Γεια σας,
-
-Παρακάτω ακολουθεί η βαθμολογία σας στη τελική εξέταση του μαθήματος:'''
-    
-    MAIL_PATTERN = '''
-{GREETING}
-ΒΙΟΛ-494 - Εισαγωγή στον προγραμματισμό
-
-AM: {AM}
-
-
-{EXERCISES}
-
-================================
-Συγκεντρωτικά:
-
-{SUMMARY}
-
-Για απορίες στείλτε DM στο slack. Μην ξεχάσετε να αναφέρετε το ΑΜ σας στις απορίες. 
-
-Χαιρετώ,
-Αλέξανδρος Καντεράκης
-
-'''
-
-    MAIL_EXERCISE_PATTERN = '''
-================================
-  Άσκηση: {EXERCISE}
-================================
-  Η λύση σας:
---------------------------------
-{SOLUTION}
---------------------------------
-Σχόλια:
-{COMMENT}
---------------------------------
-Βαθμός: {GRADE}
---------------------------------
-'''
-
-    MAIL_SUBJECT_1 = 'ΒΙΟΛ-494 - Βαθμοί ασκήσεων {START}-{END}'
-    MAIL_SUBJECT_2 = 'ΒΙΟΛ-494 - Βαθμοί τελικού διαγωνίσματος'
-
     GRADE_RE = r'^-?\d+$' # The regexp that matched grades. 
 
     def __init__(self, directory, solutions_dir, action, 
@@ -297,9 +249,14 @@ AM: {AM}
             if os.path.exists(filename):
                 print ('   Already graded..')
                 if self.show_answer_when_already_graded:
-                    print ('==ANSWER==')
+                    print ('==ANSWER:==========')
                     print (answer)
-                    print ('==========')
+                    print ('==COMMENTS:========')
+                    with open(filename) as f:
+                        comment = f.read()
+                    print (comment)
+                    print ('===================')
+
                 continue
 
             print (answer)
@@ -441,7 +398,7 @@ AM: {AM}
             if True:
                 self.mail.do_send_mail(
                     to=mail_address, 
-                    subject=self.MAIL_SUBJECT_1.format(START=self.start, END=self.end), 
+                    subject=Params.MAIL_SUBJECT.format(START=self.start, END=self.end), 
                     #subject=self.MAIL_SUBJECT_2,  # Final
                     text=mail,
                     actually_send_mail=self.actually_send_mail,
@@ -455,7 +412,7 @@ AM: {AM}
         else:
             grade_str = f'{grade}/10'
 
-        return self.MAIL_EXERCISE_PATTERN.format(
+        return Params.MAIL_EXERCISE_PATTERN.format(
             EXERCISE = exercise,
             SOLUTION = solution,
             COMMENT = comment,
@@ -491,23 +448,23 @@ AM: {AM}
                     comment = 'Αυτή η άσκηση είναι προαιρετική. Δεν θα μετρήσει στη βαθμολογία'
                     grade = pd.NA
                 else:
-                    comment = 'Δεν έστειλες τίποτα για αυτή την άσκηση!'
+                    comment =  Params.SUBMIT_NOTHING # 'Δεν έστειλες τίποτα για αυτή την άσκηση!'
                     grade = 0
 
-            grade_dics = {'Άσκηση': ASK, 'Βαθμός': grade}
+            grade_dics = {Params.EXERCISE: ASK, Params.GRADE: grade} #{'Άσκηση': ASK, 'Βαθμός': grade}
             exercises_mail += self.create_exercise_mail(ASK, answer, comment, grade)
             pandas_df.append(grade_dics)
 
         pandas_df = pd.DataFrame(pandas_df)
         summary = pandas_df.to_string(index=False, na_rep='---')
         summary = summary.replace('<NA>', '  ---') # The above does not work!!!
-        average = pandas_df['Βαθμός'].mean(skipna=True)
-        summary += '\n\nΜέσος Όρος: {}'.format(average)
+        average = pandas_df[Params.GRADE].mean(skipna=True)
+        summary += f'\n\n{Params.AVERAGE}: {average}'
 
-        greeting = self.GREETING_1.format(START=self.start, END=self.end) # Interim 
+        greeting = Params.GREETING.format(START=self.start, END=self.end) # Interim 
         #greeting = self.GREETING_2 # Final
 
-        ret = self.MAIL_PATTERN.format(
+        ret = Params.MAIL_PATTERN.format(
             GREETING=greeting,
             AM=AM,
             EXERCISES=exercises_mail,
@@ -660,8 +617,9 @@ AM: {AM}
                 print (f'WARNING: COULD NOT FIND: {notes_filename}')
                 continue
 
-            m = re.search(r'\*\*Βαθμός: ([\d\.]+)\*\*', notes)
-            assert m
+            regexp = fr'\*\*{Params.GRADE}: ([\d\.]+)\*\*'
+            m = re.search(regexp, notes)
+            assert m, f'Regular expression {regexp} was not matched in file: {notes_filename}' 
 
             grade = float(m.group(1))
             assert 0<=grade<=10.0
@@ -681,14 +639,9 @@ class Aggregator:
     Aggregates all grades
     '''
 
-    TOTAL_EXERCISES = 100
+    
     TOTAL_FINAL = 10
 
-    WEIGHT_FUN = lambda *, exercises, final, project : (
-        (0.33 * exercises) + 
-        (0.34 * final) + 
-        (0.33 * project)
-    )
 
     def __init__(self, 
         excel_filename = None, 
@@ -779,15 +732,22 @@ class Aggregator:
             self.store_grades(grades, type_='exercises')
             #print (grades.all_answers)  # {'1764': {1: {'answer': "\n# 'Ασκηση 1\n\ndef num(a):\n
 
-        print ('Collecting final grades')
-        grades = Grades(
-            directory = self.all_dirs['final']['exercises'],
-            solutions_dir = self.all_dirs['final']['solutions'],
-            action = 'aggregate',
-            ex = self.ex,
-        )
-        grades.collect_all_grades()
-        self.store_grades(grades, type_='final')   
+        # If the final directory does not exist do not 
+        # collect final grades
+        if not os.path.exists(self.all_dirs['final']['exercises']):
+            print ('Could not final exercise directory')
+            self.has_final = False
+        else:
+            self.has_final = True
+            print ('Collecting final grades')
+            grades = Grades(
+                directory = self.all_dirs['final']['exercises'],
+                solutions_dir = self.all_dirs['final']['solutions'],
+                action = 'aggregate',
+                ex = self.ex,
+            )
+            grades.collect_all_grades()
+            self.store_grades(grades, type_='final')   
 
         print ('Collecting project grades')
         project_grades = Grades.get_project_grades()
@@ -798,7 +758,7 @@ class Aggregator:
                     if AM != self.ex:
                         continue
 
-                assert AM in self.all_grades
+                assert AM in self.all_grades, f'Could not find {AM} in total grades'
                 assert 'project' in self.all_grades[AM]
                 self.all_grades[AM]['project'] = project_grade['grade']
         
@@ -812,19 +772,11 @@ class Aggregator:
         for AM, grades in self.all_grades.items():
             c += 1
 
-            text = f'''
-Γεια σας, παρακάτω ακολουθεί η αναλυτική βαθμολογία σας στο μάθημα:
-
-ΒΙΟΛ-494 - Εισαγωγή στον προγραμματισμό
-
-AM: {AM}
-
-Ασκήσεις:
-'''
+            text = Params.START_AGGREGATE_MAIL.format(AM=AM)
 
             exercises_sum = 0
             exercises_count = 0
-            for x in range(1, self.TOTAL_EXERCISES+1):
+            for x in range(1, Params.TOTAL_EXERCISES+1):
                 text += f'{x}\t'
 
                 if x in grades['exercises']:
@@ -847,33 +799,42 @@ AM: {AM}
 
             exercise_average = exercises_sum/exercises_count
 
-            text += f'\nΜέσος όρος ασκήσεων: {exercises_sum}/{exercises_count}={exercise_average}\n\n'
+            text += f'\n{Params.AVERAGE_EXERCISES}: {exercises_sum}/{exercises_count}={exercise_average}\n\n'
 
-            text += 'Τελικό Διαγώνισμα:\n'
-            for k,v in grades['final'].items():
-                text += f'{k}\t{v}\n'
 
-            nominator = sum(grades['final'].values())
-            denominator = self.TOTAL_FINAL
-            final_average = nominator/denominator
+            if self.has_final:
 
-            text += f'Μέσος όρος τελικού: {nominator}/{denominator}={final_average}\n\n'
+                text += 'Τελικό Διαγώνισμα:\n'
+                for k,v in grades['final'].items():
+                    text += f'{k}\t{v}\n'
+
+                nominator = sum(grades['final'].values())
+                denominator = self.TOTAL_FINAL
+                final_average = nominator/denominator
+
+                text += f'Μέσος όρος τελικού: {nominator}/{denominator}={final_average}\n\n'
+            else:
+                final_average = 0.0
 
             project_average = grades['project']
-            text += f'Βαθμός Project: {project_average}\n\n'
+            text += f'{Params.PROJECT_GRADE}: {project_average}\n\n'
 
-            decimal_grade = Aggregator.WEIGHT_FUN(
+            decimal_grade = Params.WEIGHT_FUN(
                 exercises = exercise_average, 
                 final=final_average, 
                 project=project_average,
             )
-            text += f'Τελικός δεκαδικός βαθμός:\n'
-            text += f'0.33*{exercise_average} + 0.34*{final_average} + 0.33*{project_average} = {decimal_grade}\n\n'
+            text += f'{Params.FINAL_FLOAT_GRADE}:\n'
+            text += Params.FINAL_GRADE_FUN(
+                exercise_average = exercise_average,
+                final_average = final_average,
+                project_average = project_average,
+                decimal_grade = decimal_grade,
+            ) 
 
             rounded_grade = Aggregator.final_grade(decimal_grade)
-            text += f'Τελικός στρογγυλοποιημένος βαθμός: {rounded_grade}\n\n'
-            text += 'Χαιρετώ,\n'
-            text += 'Αλέξανδρος Καντεράκης\n'
+            text += f'{Params.FINAL_ROUNDED_GRADE}: {rounded_grade}\n\n'
+            text += Params.END_AGGREGATE_MAIL
 
             print (
                 f'AM:{AM},'
@@ -957,8 +918,16 @@ AM: {AM}
 
 if __name__ == '__main__':
     '''
+    #GRADE
     python grade.py --dir /Users/admin/BME_17/exercises1 --sol /Users/admin/BME_17/solutions1 --action grade --start 1 --end 25 --show_answer_when_already_graded 
+    
+    #SEND EMAIL FOR EXERCISES
+    python grade.py --dir /Users/admin/BME_17/exercises1 --sol /Users/admin/BME_17/solutions1  --action send_mail --start 1 --end 25
+    python grade.py --dir /Users/admin/BME_17/exercises1 --sol /Users/admin/BME_17/solutions1  --action send_mail --start 1 --end 25 --ex alkaios.lmp@gmail.com --actually_send_mail --send_to_me 
+    python grade.py --dir /Users/admin/BME_17/exercises1 --sol /Users/admin/BME_17/solutions1  --action send_mail --start 1 --end 25 --actually_send_mail  
 
+    #AGGREGATE
+    python grade.py --action aggregate --send_to_me --ex alkaios.lmp@gmail.com 
 
     ====================
     python grade.py --dir /Users/admin/biol-494/exercises/ --sol /Users/admin/biol-494/solutions --action grade

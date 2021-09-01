@@ -23,6 +23,12 @@ from os.path import expanduser
 from get_ask import get_ask
 from params import Params
 
+try:
+    from penalties import Penalties
+except ImportError:
+    class Penalties:
+        PENALTIES: {}
+
 class Utils:
     '''
     Useful generic utils
@@ -86,17 +92,19 @@ class Mail:
         from email.mime.text import MIMEText
         from email.mime.multipart import MIMEMultipart
 
-        msg = MIMEText(text, 'plain', 'utf-8')
+        #msg = MIMEText(text, 'plain', 'utf-8') # If text is garbled, try this
+        msg = MIMEText(text)
+
         sender_email = "alexandros.kanterakis@gmail.com"
         receiver_email = to
 
 
-        email = MIMEMultipart('mixed')
+        email = MIMEMultipart('mixed') # email = MIMEMultipart()
         email['From'] = sender_email
         email['To'] = receiver_email
         email['Subject'] = Header(subject, 'utf-8')
 
-        msg.set_payload(text.encode('utf-8'))
+        msg.set_payload(text.encode('utf-8')) #msg.set_payload(text.encode('ascii'))
         email.attach(msg)
 
         message = email.as_string()
@@ -108,6 +116,7 @@ class Mail:
             self.server.sendmail(sender_email, receiver_email, message)
         else:
             print (text)
+            #print (message)
         time.sleep(sleep)
         print ('Mail sent')
 
@@ -138,8 +147,8 @@ class Grades:
         'Askhh', 'Askshsh', '΄΄Ασκηση', '΄΄Άσκηση', 'Άskisi', 'Αskisi',
         '.+skisi',
 
-        'Exercise', 'exercise', 'ex', 'exercise.', 'Ex.', 
-        'excercise', 'exercice',
+        'Exercise', 'exercise', 'ex', 'exercise.', 'Ex', 'Ex.',
+        'excercise', 'exercice', 'EX', 'EX.'
     ]
 
     ex_regexp = re.compile(r'^\s*#+\s*({})\s*_*(?P<ask>\d+)'.format('|'.join(declarations)))
@@ -767,6 +776,8 @@ class Aggregator:
         self.lesson_grades = {}
         self.mail = Mail()
 
+        final_grades = [] # Final grades for excel
+
         total = len(self.all_grades)
         c = 0
         for AM, grades in self.all_grades.items():
@@ -834,14 +845,21 @@ class Aggregator:
 
             rounded_grade = Aggregator.final_grade(decimal_grade)
             text += f'{Params.FINAL_ROUNDED_GRADE}: {rounded_grade}\n\n'
+
+            if AM in Penalties.PENALTIES:
+                rounded_grade = Penalties.PENALTIES[AM]
+                text += f'\n\nGrade After disciplinary actions: {rounded_grade}\n\n'
+
             text += Params.END_AGGREGATE_MAIL
+
+            final_grades.append({'Email': AM, 'Final_Grade': rounded_grade})
 
             print (
                 f'AM:{AM},'
                 f' dec_grade: {decimal_grade},'
                 f' rnd_grade: {rounded_grade},'
-                f' ex:{exercise_average},'
-                f' fin:{final_average},'
+                f' ex: {exercise_average},'
+                f' fin: {final_average},'
                 f' proj: {project_average} '
             )
             #print (text)
@@ -852,7 +870,7 @@ class Aggregator:
                 mail_address = 'alexandros.kanterakis@gmail.com'
             else:
                 mail_address = Grades.create_mail_address(AM)
-            subject = 'ΒΙΟΛ-494, Τελικός βαθμός'
+            subject = Params.FINAL_SUBJECT #'ΒΙΟΛ-494, Τελικός βαθμός'
 
             if self.actually_send_mail:
                 self.mail.do_send_mail(
@@ -866,6 +884,11 @@ class Aggregator:
                 print (text)
 
         self.mail.disconnect_from_gmail()
+
+        # Create findal_grades excel
+        final_grades_df = pd.DataFrame(final_grades)
+        final_grades_df.to_excel('final_grades.xlsx')
+        print ('Created: final_grades.xlsx')
 
 
     def generate_excel(self,
@@ -925,9 +948,17 @@ if __name__ == '__main__':
     python grade.py --dir /Users/admin/BME_17/exercises1 --sol /Users/admin/BME_17/solutions1  --action send_mail --start 1 --end 25
     python grade.py --dir /Users/admin/BME_17/exercises1 --sol /Users/admin/BME_17/solutions1  --action send_mail --start 1 --end 25 --ex alkaios.lmp@gmail.com --actually_send_mail --send_to_me 
     python grade.py --dir /Users/admin/BME_17/exercises1 --sol /Users/admin/BME_17/solutions1  --action send_mail --start 1 --end 25 --actually_send_mail  
+    python grade.py --dir /Users/admin/BME_17/exercises1 --sol /Users/admin/BME_17/solutions1  --action send_mail --start 1 --end 25 --actually_send_mail --ex jacobgavalas.bme.uoc@gmail.com
+    python grade.py --dir /Users/admin/BME_17/exercises1 --sol /Users/admin/BME_17/solutions1  --action send_mail --start 1 --end 25 --actually_send_mail --ex iropap94@gmail.com
 
     #AGGREGATE
-    python grade.py --action aggregate --send_to_me --ex alkaios.lmp@gmail.com 
+    python grade.py --action aggregate --send_to_me --ex alkaios.lmp@gmail.com
+    python grade.py --action aggregate --ex letsosalexandros@gmail.com 
+    python grade.py --action aggregate --ex med12p1170012@med.uoc.gr
+    python grade.py --action aggregate --ex manthostr@gmail.com 
+    python grade.py --action aggregate  --ex manthostr@gmail.com  --actually_send_mail --send_to_me 
+    python grade.py --action aggregate  --ex alkaios.lmp@gmail.com  --actually_send_mail --send_to_me 
+    python grade.py --action aggregate  --actually_send_mail 
 
     ====================
     python grade.py --dir /Users/admin/biol-494/exercises/ --sol /Users/admin/biol-494/solutions --action grade

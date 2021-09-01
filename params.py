@@ -48,10 +48,11 @@ Grade: {GRADE}
     MAIL_SUBJECT = 'BME-17 - Grades for exercises {START}-{END}'
 
     SUBMIT_NOTHING = 'You did not submit anything for this exercise'
-    AVERAGE_EXERCISES = 'Average exercise grade' #  'Μέσος όρος ασκήσεων'
+    AVERAGE_EXERCISES = 'Average exercises grade' #  'Μέσος όρος ασκήσεων'
     PROJECT_GRADE = "Project's Grade" # Βαθμός Project
     FINAL_FLOAT_GRADE = 'Final float grade' # 'Τελικός δεκαδικός βαθμός''
     FINAL_ROUNDED_GRADE = 'Final rounded grade' # 'Τελικός στρογγυλοποιημένος βαθμός'
+    FINAL_SUBJECT = 'ΒΜΕ-17, Final Grade' # 'ΒΙΟΛ-494, Τελικός βαθμός'
 
 
     START_AGGREGATE_MAIL = '''
@@ -64,7 +65,12 @@ Mail: {AM}
 Exercises:
 '''
 
-    END_AGGREGATE_MAIL = 'Regards,\n' 'Alexandros Kanterakis\n' # 'Χαιρετώ,\n' 'Αλέξανδρος Καντεράκης\n'
+    END_AGGREGATE_MAIL = '''
+For questions please send email to kantale@ics.forth.gr
+
+Regards,
+Alexandros Kanterakis
+''' #  # 'Χαιρετώ,\n' 'Αλέξανδρος Καντεράκης\n'
 
     EXERCISE = 'Exercise' # Άσκηση 
     GRADE = 'Grade' # Βαθμός 

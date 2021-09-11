@@ -109,4 +109,6 @@ python program.py --compute_cheaters 1500 --plot_population 10000 20000 11
 **Implementation Note 5**. Very informative tutorial and guide on using argparse to parse command line arguments: https://realpython.com/command-line-interfaces-python-argparse/
 
 
+### References
+* Alser, Mohammed, et al. "COVIDHunter: An Accurate, Flexible, and Environment-Aware Open-Source COVID-19 Outbreak Simulation Model." arXiv preprint arXiv:2102.03667 (2021). 
 

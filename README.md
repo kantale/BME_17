@@ -128,7 +128,16 @@ Although this is the recommended way of handing over exercises other options are
 
 **All submission will be regorously checked for identical content with special (and [very sophisticated](https://theory.stanford.edu/~aiken/moss/)) software. All incidents will be reported and an overall zero grade for the complete course will be given**. Although copying is not allowed, you are allowed to google for solution and even copy-paste solution from the Internet. If you do that you will have to include the link to the solution. 
 
+#### Grading
+The grade on September will account either for:
 
+1. 100% of your final grade, or
+2. 50% of your final grade with the other 50% being your exercise grade, or
+3. 50% of your final grade with the other 50% being your project's grade
+* **Between these 3 I will choose the one that is greater.**
+
+If you take part in this examination process (in September), then this grade will be the final grade on this lesson. If you score lower in September than what you scored in August, then the September (lower) grade will be assigned.
+Students that have been assigned a zero grade due to copy/share of the project can take part on this exam (unless the board decides otherwise). Of course their project's grade remains zero (so no option #3).
 
 
 ### Programming with python additional material

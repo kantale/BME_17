@@ -98,7 +98,7 @@ Here I describe the process of the final examination of this course on October 2
 * The examination will happen remotely. You don't have to be on a given place at this date. 
 * At exactly 16:50 I will send an email (and a post on slack) with 7 programming questions. These questions will have the exact format / style / difficulty like the [25 exercises](exercises.md) of this course. Also the content/material of these questions will have a reasonable resemblance with these exercises.
 * Once you receive the mail you can start writing your solutions.
-* You will have to send an email to (kantale@ics.forth.gr)[mailto:kantale@ics.forth.gr] with your solutions before 19:05. That means that mails with a timestamp later than 19:05 will not be accepted/graded. 
+* You will have to send an email to [kantale@ics.forth.gr](mailto:kantale@ics.forth.gr) with your solutions before 19:05. That means that mails with a timestamp later than 19:05 will not be accepted/graded. 
 * During the examination you are not allowed to send any personal email or DM. Every question has to be sent in the #general channel of the slack. 
 *  On the mail you will have to copy-paste the solutions one after the other. On the top of each solution there should exist a python comment in the following format: 
 

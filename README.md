@@ -90,6 +90,45 @@ In your email you should include:
    1. **95%:** Ability to run your program with all available parameters and get the expected results.
    2. **5%:** Technical completeness and quality of your report. Note: The size of the report is not important! A 500 word report that contains concisely what is requested is enough. Seek for quality not quantity!
 
+### 2nd examination period (September (actually October))
+Here I describe the process of the final examination of this course on October 2021.
+
+* Examination will take place on Thursday 5 October at 17:00 - 19:00.
+* You will have to join the slack channel bme-17.slack.com . You must have received an invitation to join, if not please send me an email ASAP. The coordination of the examination will happen through this channel. 
+* The examination will happen remotely. You don't have to be on a given place at this date. 
+* At exactly 16:50 I will send an email (and a post on slack) with 7 programming questions. These questions will have the exact format / style / difficulty like the [25 exercises](exercises.md) of this course. Also the content/material of these questions will have a reasonable resemblance with these exercises.
+* Once you receive the mail you can start writing your solutions.
+* You will have to send an email to (kantale@ics.forth.gr)[mailto:kantale@ics.forth.gr] with your solutions before 19:05. That means that mails with a timestamp later than 19:05 will not be accepted/graded. 
+* During the examination you are not allowed to send any personal email or DM. Every question has to be sent in the #general channel of the slack. 
+*  On the mail you will have to copy-paste the solutions one after the other. On the top of each solution there should exist a python comment in the following format: 
+
+```python
+# exercise <NUMBER>
+```
+
+For example. Suppose that the exercise is:
+
+> Exercise: 11
+>
+> Write a function that will take as arguments two numbers. The function should return the sum of these two numbers. 
+>
+
+The part of your email that will contain the solution to this exercise should be:
+
+```python
+
+# exercise 11
+def f(a,b):
+    return a+b
+```
+
+Although this is the recommended way of handing over exercises other options are:
+* Attachments with .py files. Again on the top of each solution there should be a comment as described before.
+* Attachments with .ipynb files. Do not forget to add the python comment with the number of the exercise as described before. This comment should be in the same cell with the one containing your solution.
+
+
+
+
 ### Programming with python additional material
 * Official Documentation / General links
    * [Python documentation](https://docs.python.org/3/)

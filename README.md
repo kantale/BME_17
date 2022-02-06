@@ -168,6 +168,7 @@ Students that have been assigned a zero grade due to copy/share of the project c
    * [Python & APIs: A Winning Combo for Reading Public Data](https://realpython.com/python-api/)
    * [Recursion in Python: An Introduction](https://realpython.com/python-recursion/)
    * [Parsing command line arguments with argparse](https://realpython.com/command-line-interfaces-python-argparse/)
+   * [Guiding Design Principles](https://nsls-ii.github.io/scientific-python-cookiecutter/guiding-design-principles.html)
 * Challenges: 
    * https://adventofcode.com/   
    * https://www.hackerrank.com/dashboard

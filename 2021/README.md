@@ -2,18 +2,18 @@
 This page contains notes. exercises, project descriptions and other material relevant to the [Biomedical Engineering MSc](https://www.bme-crete.edu.gr/en/home) program that is held in coordination with [University of Crete](https://en.uoc.gr/), [Technical University of Crete](https://www.tuc.gr/index.php) and the [Foundation for Research and Technology-Hellas](https://www.forth.gr/)
 
 ### Lectures
-1. Python basics . [html](notes/python_basics.html), [markdown](notes/python_basics.md), [ipynb](notes/python_basics.ipynb), [pdf](notes/python_basics.pdf)
-2. Variables, functions and the if syntax . [html](notes/python_vars_if_functions.html), [markdown](notes/python_vars_if_functions.md), [ipynb](notes/python_vars_if_functions.ipynb), [pdf](notes/python_vars_if_functions.pdf)
-3. Lists [html](notes/python_lists.html), [markdown](notes/python_lists.md), [ipynb](notes/python_lists.ipynb), [pdf](notes/python_lists.pdf).
-4. List comprehension . [html](notes/python_list_comprehensions.html), [markdown](notes/python_list_comprehensions.md), [ipynb](notes/python_list_comprehensions.ipynb), [pdf](notes/python_list_comprehensions.pdf).
-5. While, dictionary, tuples, sets . [html](notes/python_while_dictionary_tuples_sets.html), [markdown](notes/python_while_dictionary_tuples_sets.md), [ipynb](notes/python_while_dictionary_tuples_sets.ipynb), [pdf](notes/python_while_dictionary_tuples_sets.pdf). 
-6. Files, lambda, string formatting, ternary operator, is operator, variable scoping . [html](notes/python_files_tern_lambda_sf_is.html), [markdown](notes/python_files_tern_lambda_sf_is.md), [ipynb](notes/python_files_tern_lambda_sf_is.ipynb), [pdf](notes/python_files_tern_lambda_sf_is.pdf). 
-7. Generators, Exceptions, Collections . [html](notes/python_gen_imp_cons_exc.html), [markdown](notes/python_gen_imp_cons_exc.md), [ipynb](notes/python_gen_imp_cons_exc.ipynb), [pdf](notes/python_gen_imp_cons_exc.pdf).  
-8. Serialization, itertools, Regular expressions . [html](notes/python_ser_iter_re.html), [markdown](notes/python_ser_iter_re.md), [ipynb](notes/python_ser_iter_re.ipynb), [pdf](notes/python_ser_iter_re.pdf).  
-9. Pandas . [html](notes/python_pandas.html), [markdown](notes/python_pandas.zip), [ipynb](notes/python_pandas.ipynb), [pdf](notes/python_pandas.pdf).  
-10. Numpy . [html](notes/python_numpy.html), [markdown](notes/python_numpy.zip), [ipynb](notes/python_numpy.ipynb), [pdf](notes/python_numpy.pdf).  
-11. Plotting . [html](notes/python_matplotlib.html), [markdown](notes/python_matplotlib.zip), [ipynb](notes/python_matplotlib.ipynb), [pdf](notes/python_matplotlib.pdf).  
-12. Classes . [html](notes/python_classes.html), [markdown](notes/python_classes.md), [ipynb](notes/python_classes.ipynb), [pdf](notes/python_classes.pdf).  
+1. Python basics . [html](../notes/python_basics.html), [markdown](../notes/python_basics.md), [ipynb](../notes/python_basics.ipynb), [pdf](../notes/python_basics.pdf)
+2. Variables, functions and the if syntax . [html](../notes/python_vars_if_functions.html), [markdown](../notes/python_vars_if_functions.md), [ipynb](../notes/python_vars_if_functions.ipynb), [pdf](../notes/python_vars_if_functions.pdf)
+3. Lists [html](../notes/python_lists.html), [markdown](../notes/python_lists.md), [ipynb](../notes/python_lists.ipynb), [pdf](../notes/python_lists.pdf).
+4. List comprehension . [html](../notes/python_list_comprehensions.html), [markdown](../notes/python_list_comprehensions.md), [ipynb](../notes/python_list_comprehensions.ipynb), [pdf](../notes/python_list_comprehensions.pdf).
+5. While, dictionary, tuples, sets . [html](../notes/python_while_dictionary_tuples_sets.html), [markdown](../notes/python_while_dictionary_tuples_sets.md), [ipynb](../notes/python_while_dictionary_tuples_sets.ipynb), [pdf](../notes/python_while_dictionary_tuples_sets.pdf). 
+6. Files, lambda, string formatting, ternary operator, is operator, variable scoping . [html](../notes/python_files_tern_lambda_sf_is.html), [markdown](../notes/python_files_tern_lambda_sf_is.md), [ipynb](../notes/python_files_tern_lambda_sf_is.ipynb), [pdf](../notes/python_files_tern_lambda_sf_is.pdf). 
+7. Generators, Exceptions, Collections . [html](../notes/python_gen_imp_cons_exc.html), [markdown](../notes/python_gen_imp_cons_exc.md), [ipynb](../notes/python_gen_imp_cons_exc.ipynb), [pdf](../notes/python_gen_imp_cons_exc.pdf).  
+8. Serialization, itertools, Regular expressions . [html](../notes/python_ser_iter_re.html), [markdown](../notes/python_ser_iter_re.md), [ipynb](../notes/python_ser_iter_re.ipynb), [pdf](../notes/python_ser_iter_re.pdf).  
+9. Pandas . [html](../notes/python_pandas.html), [markdown](../notes/python_pandas.zip), [ipynb](../notes/python_pandas.ipynb), [pdf](../notes/python_pandas.pdf).  
+10. Numpy . [html](../notes/python_numpy.html), [markdown](../notes/python_numpy.zip), [ipynb](../notes/python_numpy.ipynb), [pdf](../notes/python_numpy.pdf).  
+11. Plotting . [html](../notes/python_matplotlib.html), [markdown](../notes/python_matplotlib.zip), [ipynb](../notes/python_matplotlib.ipynb), [pdf](../notes/python_matplotlib.pdf).  
+12. Classes . [html](../notes/python_classes.html), [markdown](../notes/python_classes.md), [ipynb](../notes/python_classes.ipynb), [pdf](../notes/python_classes.pdf).  
 
 ### Regarding copying
 Both the Exercises and the Project of this course are assigned individually. You are allowed to discuss potential problems and solutions with your colleagues (I cannot prevent that), but copying and sharing solutions is strictly prohibited. Keep in mind: the programming code that is written by amateurs (in programming) tends to be highly personal. A code that has been shared is very easily identifiable even if various tricks (i.e. change of variable names) have been used. Incidents of copying will be reported and a grade of zero will be assigned.  

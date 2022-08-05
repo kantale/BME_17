@@ -482,12 +482,23 @@ c                       7
 
 
 ### Άσκηση 25
-Ανοίξτε το αρχείο που έχετε φτιάξει από την άσκηση 18 με την R (π.χ. με το RStudio) φορτώστε το σε ένα data frame και κάντε ένα plot όπου:
+Ανοίξτε το αρχείο που έχετε φτιάξει από την άσκηση 18 με την R (π.χ. με το RStudio), ή με python φορτώστε το σε ένα data frame και κάντε ένα plot όπου:
 1. στον άξονα Χ θα είναι το `Chromosome/scaffold position start (bp)` 
 2. στον άξονα Υ με μπλε κουκίδες θα είναι οι τιμές της στήλης `PolyPhen score`
 3. στον άξονα Υ με κόκκινες κουκίδες θα είναι οι τιμες της στήλης `SIFT score`
 
-Αποθηκεύστε το barplot σαν αρχείο png και κάντε το εισαγωγή στην αναφορά σας. 
+Αποθηκεύστε το plot σαν αρχείο png και κάντε το εισαγωγή στην αναφορά σας. 
+
+Η φυσική σημασία της άσκησης είναι: τα scores PolyPhen και SIFT μετράνε μία παρόμοια αλλά όχι ιδιότητα. 
+
+To [PolyPhen μετράει](http://genetics.bwh.harvard.edu/pph2/):
+> possible impact of an amino acid substitution on the structure and function of a human protein using straightforward physical and comparative considerations
+
+Το [SIFT μεράει](https://sift.bii.a-star.edu.sg/www/SIFT_help.html#SIFT_OUTPUT_SUBST):
+> whether an amino acid substitution in a protein will have a phenotypic effect 
+
+αν και μοιάζουν αυτά τα δύο, είναι από φυσικής άποψης διαφορετικές εκτιμήσεις. Το plot θα μας δόσει μία εικόνα του πόσο μοιάζουν αυτές οι εκτιμήσεις!
+
 
 ### Άσκηση 26
 Ποιος είναι ο κωδικός (Accession number) και ποιο το όνομα (Entry name) της πρωτεΐνης σύμφωνα με τη βάση UniProt για το γονίδιο στο οποίο ανήκει η μετάλλαξη που έχετε επιλέξει;

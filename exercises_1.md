@@ -411,7 +411,47 @@ unknown
 
 
 ### Άσκηση 22
-Ανοίξτε το αρχείο που έχετε φτιάξει από την άσκηση 18 με την R (π.χ. με το RStudio) και φτιάξτε ένα barplot με τις διαφορετικές τιμές της στήλης `PolyPhen prediction`. Σε κάθε μπάρα θα πρέπει να φαίνονται με διαφορετικές σκιάσεις (ή χρώματα) οι διαφορετικές τιμές της στήλης `SIFT prediction`. Αποθηκεύστε το barplot σαν αρχείο png και κάντε το εισαγωγή στην αναφορά σας. 
+Ανοίξτε το αρχείο που έχετε φτιάξει από την άσκηση 18 με την R (π.χ. με το RStudio), η με python (π.χ. με pandas) και φτιάξτε ένα barplot με τις διαφορετικές τιμές της στήλης `PolyPhen prediction`. Σε κάθε μπάρα θα πρέπει να φαίνονται με διαφορετικές σκιάσεις (ή χρώματα) οι διαφορετικές τιμές της στήλης `SIFT prediction`. Αποθηκεύστε το barplot σαν αρχείο png και κάντε το εισαγωγή στην αναφορά σας. Για παράδειγμα ας υποθέσουμε ότι τα δεδομένα είναι ως εξής:
+
+```text
+PolyPhen Prediction    SIFT prediction
+benign                 tolerated
+possibly damaging      tolerated
+probably damaging      deleterious
+probably damaging      deleterious
+benign                 deleterious
+probably damaging      tolerated
+benign                 tolerated
+probably damaging      tolerated
+possibly damaging      tolerated
+probably damaging      deleterious
+benign                 tolerated
+possibly damaging      tolerated
+probably damaging      tolerated
+benign                 tolerated
+possibly damaging      tolerated
+benign                 deleterious
+probably damaging      tolerated
+benign                 tolerated
+benign                 tolerated
+benign                 deleterious
+```
+
+Τότε αν μετρήσουμε το πλήθος από διαφορετικά `SIFT predictions` που έχουμε για κάθε διαφορετική τιμή της στήλης `PolyPhen Prediction`, έχουμε:
+
+```text
+PolyPhen Prediction  SIFT prediction   counts
+benign               tolerated         6
+benign               deleterious       3
+possibly damaging    tolerated         0
+possibly damaging    deleterious       4
+probably damaging    tolerated         4
+probably damaging    deleterious       3
+```
+
+Τότε το barplot θα πρέπει να είναι ως εξής:
+![img](https://i.imgur.com/u9sKUwZ.png)
+
 
 ### Άσκηση 23
 Ανοίξτε το αρχείο που έχετε φτιάξει από την άσκηση 18 με την R (π.χ. με το RStudio) και φτιάξτε ένα scatter plot όπου στον άξονα Χ θα έχει τις τιμές της στήλης `PolyPhen score` και στον άξονα Υ θα έχει τις τιμές της στήλης `SIFT score`. Αποθηκεύστε το scatter plot σαν αρχείο png και κάντε το εισαγωγή στην αναφορά σας. 

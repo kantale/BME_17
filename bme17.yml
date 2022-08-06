@@ -1,0 +1,12 @@
+name: bme17 
+
+channels:
+  - conda-forge
+  - bioconda
+
+dependencies:
+  - samtools
+  - bowtie2
+  - bcftools
+  - ensembl-vep 
+

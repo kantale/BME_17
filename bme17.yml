@@ -9,4 +9,5 @@ dependencies:
   - bowtie2
   - bcftools
   - ensembl-vep 
+  - fastqc
 

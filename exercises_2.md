@@ -53,20 +53,39 @@ samtools faidx chr22.fa
 ```
 
 ### Βήμα 7
-Το επόμενο βήμα είναι να γίνει η στοίχιση των reads στο γονιδίωμα αναφοράς. Για να γίνει αυτό θα χρησιμοποιήσουμε το πρόγραμμα [bowtie2](http://bowtie-bio.sourceforge.net/bowtie2/index.shtml). Δυστυχώς το bowtie2 χρησιμοποιεί το δικό του index το οποίο είναι διαφορετικό από το index από το samtools. Για να φτιάξετε το index του γονιδιώματος αναφοράς σύμφωνα με το φορμάτ του bowtie2 πρέπει να τρέξετε:
+Το επόμενο βήμα είναι να γίνει η στοίχιση των reads στο γονιδίωμα αναφοράς (alignment). Για να γίνει αυτό θα χρησιμοποιήσουμε το πρόγραμμα [bowtie2](http://bowtie-bio.sourceforge.net/bowtie2/index.shtml). Δυστυχώς το bowtie2 χρησιμοποιεί το δικό του index το οποίο είναι διαφορετικό από το index από το samtools. Για να φτιάξετε το index του γονιδιώματος αναφοράς σύμφωνα με το φορμάτ του bowtie2 πρέπει να τρέξετε:
 
 ```bash
 bowtie2-build chr22.fa chr22
 ```
 
 ### Βήμα 8
+Μετά το βήμα 7 είμαστε έτοιμοι επιτέλους για το aligment. Τρέχτε τη παρακάτω εντολή:
+
+```bash
+bowtie2 -x chr22 -q -1 bme17.r1.fastq -2 bme17.r2.fastq -S bme.sam
+```
+
+Αυτή η εντολή παίρνει τα pair-ends reads και τα κάνει align στο γονιδίωμα αναφοράς. Το αποτέλεσμα αποθηκεύεται στο αρχείο bme.sam το οποίο είναι σε [sam φορμά](https://en.wikipedia.org/wiki/SAM_%28file_format%29). 
+
+### Βήμα 9
+Το SAM είναι ένα φορμάτ αρχείο κειμένου το οποίο είναι εύκολο να το διαβάσουμε αλλά καταλαμβάνει πολύ χώρο στον σκληρό μας δίσκο. Για αυτό μας βολεύει να το μετατρέπουμε στο αντίστοιχο δυαδικό (binary) φορμά το οποίο ονομάζεται [BAM](https://en.wikipedia.org/wiki/Binary_Alignment_Map) με τη παρακάτω εντολή:
+
+```bash
+samtools view -S -b bme17.sam > bme.bam
+````
+
+### Βήμα 10
+Τα BAM αρχείο που έχουμε φτιάξει περιέχει όλα τα reads στοιχισμένα στο γονιδίωμα ααφοράς, αλλά δεν είναι ταξινομημένα κάτι που δυσχεραίνει την επεξεργασία τους. Η παρακάτω εντολή ταξινομεί το BAM αρχείο:
+
+```bash
+samtools sort bme.bam > bme17.sorted.bam
+````
+
+### Βήμα 11 
+
 
 ```
-* bowtie2-build chr22.fa chr22
-*  bowtie2 -x chr22 -q -1 tt.r1.rep.c.fastq -2 tt.r2.rep.c.fastq -S tt.sam
-* samtools view -S -b tt.sam > tt.bam
-* samtools sort tt.bam > tt.sorted.bam  
-* samtools coverage tt.sorted.bam 
 * samtools index tt.sorted.bam 
 * conda install -c bioconda bcftools 
 * # apt-get install libgsl-dev 

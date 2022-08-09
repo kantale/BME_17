@@ -10,4 +10,5 @@ dependencies:
   - bcftools
   - ensembl-vep 
   - fastqc
+  - igv
 

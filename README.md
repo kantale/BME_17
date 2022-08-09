@@ -22,6 +22,7 @@ The main medium for communication with the instructor and between the students w
 
 ### Exercises 
 * [Ασκήσεις 1](exercises_1.md) 
+* [Ασκήσεις 2](exercises_2.md)
 
 ### Regarding copying
 Both the Exercises and the Project of this course are assigned individually. You are allowed to discuss potential problems and solutions with your colleagues (I cannot prevent that), but copying and sharing solutions is strictly prohibited. Incidents of copying will be reported and a grade of zero will be assigned.  

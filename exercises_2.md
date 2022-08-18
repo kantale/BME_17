@@ -146,7 +146,7 @@ igv bme17.sorted.bam
 Τώρα που είμαστε σίγουροι ότι το αρχείο με το alignment είναι σωστό, ήρθε η ώρα να ψάξουμε για μεταλλάξεις που υπάρχουν μέσα στα reads σε σχέση με το γονιδίωμα αναφοράς. Αυτή η διαδικασία ονομάζεται variant calling. Υπάρχει μία τεράστια συλλογή από προγράμματα που κάνουν variant calling. Ένα από αυτά είναι το [bcftools](http://samtools.github.io/bcftools/bcftools.html). H ενολή για να κάνουμε variant call με το bctools είναι:
 
 ```bash
-bcftools mpileup -f chr22.fa bme17.sorted.bam | bcftools call -mv -Ov -o bme.vcf
+bcftools mpileup -f chr22.fa bme17.sorted.bam | bcftools call -mv -Ov -o bme17.vcf
 ```
 
 Η εντολή αυτή παράγει ένα αρχείο σε φορμά [VCF](https://en.wikipedia.org/wiki/Variant_Call_Format) το οποίο περιέχει όλες τις μεταλλάξεις που περιέχει το δείγμα μας. 
